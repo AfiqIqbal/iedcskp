@@ -2,9 +2,10 @@ import { useNavigate } from 'react-router-dom';
 import { useAdmin } from '@/contexts/AdminContext';
 import { Button } from '@/components/ui/button';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
-import { Calendar, MessageSquare, LogOut } from 'lucide-react';
+import { Calendar, MessageSquare, LogOut, Trophy } from 'lucide-react';
 import EventsSection from '../components/admin/EventsSection';
 import MessagesSection from '../components/admin/MessagesSection';
+import WinnersSection from '../components/admin/WinnersSection';
 
 const AdminDashboard = () => {
   const { logout } = useAdmin();
@@ -39,6 +40,10 @@ const AdminDashboard = () => {
                 <MessageSquare className="h-4 w-4" />
                 Messages
               </TabsTrigger>
+              <TabsTrigger value="winners" className="flex items-center gap-2">
+                <Trophy className="h-4 w-4" />
+                Winners
+              </TabsTrigger>
             </TabsList>
           </div>
 
@@ -48,6 +53,10 @@ const AdminDashboard = () => {
           
           <TabsContent value="messages">
             <MessagesSection />
+          </TabsContent>
+          
+          <TabsContent value="winners">
+            <WinnersSection />
           </TabsContent>
         </Tabs>
       </main>

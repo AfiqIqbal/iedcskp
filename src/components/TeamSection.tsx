@@ -7,105 +7,104 @@ const teamMembers = [
     name: "DR. JOSEPH",
     role: "NODAL OFFICER",
     image: "/team/NODAL_OFFICER.jpg",
-    linkedin: "https://linkedin.com/in/dr-joseph",
-    email: "president@iedcgecpkd.org",
-    github: "https://github.com/dr-joseph"
+    linkedin: "https://www.linkedin.com/in/joseph-peter-aa312738?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
+    email: "josephedatt@gmail.com"
   },
   {
     name: "AFIQ IQBAL K",
     role: "LEAD",
     image: "/team/LEAD.jpg",
-    linkedin: "https://linkedin.com/in/adarsh-s",
-    email: "studentlead@iedcgecpkd.org",
-    github: "https://github.com/adarsh-s"
+    linkedin: "https://www.linkedin.com/in/afiq-iqbal-522675282/",
+    email: "afiqiqbalk19@gmail.com",
+    github: "https://github.com/AfiqIqbal"
   },
   {
     name: "NAVAMI BR",
     role: "CO LEAD",
     image: "/team/CO-LEAD.jpg",
-    linkedin: "https://linkedin.com/in/akshay-kumar",
-    email: "techlead@iedcgecpkd.org",
-    github: "https://github.com/akshay-kumar"
+    linkedin: "https://linkedin.com/in/navamibr-nbr24",
+    email: "navami.br24@gmail.com",
+    github: "https://github.com/NBR-24"
   },
   {
-    name: "AYYAPPA DAS",
-    role: "TECHNOLOGY LEAD",
-    image: "/team/TECHNOLOGY_LEAD.jpg",
-    linkedin: "https://linkedin.com/in/meera-r",
-    email: "design@iedcgecpkd.org",
-    github: "https://github.com/meera-r"
-  },
-  {
-    name: "GOPIKA",
+    name: "GOPIKA KRISHNA",
     role: "CREATIVE AND INNOVATION LEAD",
     image: "/team/CREATIVE_AND_INNOVATION_LEAD.jpg",
-    linkedin: "https://linkedin.com/in/vishnu-p",
-    email: "marketing@iedcgecpkd.org",
-    github: "https://github.com/vishnu-p"
+    linkedin: "https://in.linkedin.com/in/gopika-krishna-94682a317",
+    email: "gopikaxvii@gmail.com",
+    github: "https://github.com/gopikax"
   },
   {
     name: "NEERAJ TR",
     role: "IPR & RESEARCH LEAD",
     image: "/team/IPR_&_RESEARCH_LEAD.jpg",
-    linkedin: "https://linkedin.com/in/anjali-k",
-    email: "events@iedcgecpkd.org",
-    github: "https://github.com/anjali-k"
+    linkedin: "https://www.linkedin.com/in/neeraj-tr-142280319",
+    email: "neerajtr360@gmail.com",
+    github: "https://github.com/neerajtr360"
   },
   {
-    name: "NIRANJANA",
+    name: "NIRANJANA MV",
     role: "QUALITY AND OPERATION LEAD",
-    image: "/team/content-lead.jpg",
-    linkedin: "https://linkedin.com/in/rahul-m",
-    email: "content@iedcgecpkd.org",
-    github: "https://github.com/rahul-m"
+    image: "/team/QUALITY_AND_OPERATION_LEAD.jpg",
+    linkedin: "https://www.linkedin.com/in/niranjana-mv-",
+    email: "niranjanamv04@gmail.com",
+    github: "https://github.com/NiranjanaMV"
   },
   {
     name: "NANDHANA KP",
     role: "WOMEN IN INNOVATION LEAD",
     image: "/team/WOMEN_IN_INNOVATION_LEAD.jpg",
-    linkedin: "https://linkedin.com/in/sneha-t",
-    email: "social@iedcgecpkd.org",
-    github: "https://github.com/sneha-t"
+    linkedin: "https://www.linkedin.com/in/nandhana-kp-662312251",
+    email: "kpnandhana2004@gmail.com",
+    github: "https://github.com/Nandhanakp"
   },
   {
     name: "ANSAAF",
     role: "COMMUNITY LEAD",
     image: "/team/COMMUNITY_LEAD.jpg",
-    linkedin: "https://linkedin.com/in/sneha-t",
-    email: "social@iedcgecpkd.org",
-    github: "https://github.com/sneha-t"
+    linkedin: "https://www.linkedin.com/in/ansaafanas",
+    email: "ansaafanas3@gmail.com",
+    github: "https://github.com/Ansaafanas"
   },
   {
-    name: "ASLAM",
+    name: "MOHAMMED ASLAM",
     role: "FINANCE LEAD",
     image: "/team/FINANCE_LEAD.jpg",
-    linkedin: "https://linkedin.com/in/sneha-t",
-    email: "social@iedcgecpkd.org",
-    github: "https://github.com/sneha-t"
+    linkedin: "https://www.linkedin.com/in/mohammed-aslam-71079a27b",
+    email: "mhdaslamktd@gmail.com",
+    github: "https://github.com/mhdaslamp"
   },
   {
     name: "SARFAS P",
     role: "BRANDING LEAD",
     image: "/team/BRANDING_LEAD.jpg",
-    linkedin: "https://linkedin.com/in/sneha-t",
-    email: "social@iedcgecpkd.org",
-    github: "https://github.com/sneha-t"
+    linkedin: "https://www.linkedin.com/in/sarfas-p646",
+    email: "sarfaspattarathil@gmail.com",
+    github: "https://github.com/SARFAS-P"
   },
   {
     name: "ASWATHI KR",
     role: "DESIGN LEAD",
     image: "/team/DESIGN_LEAD.jpg",
-    linkedin: "https://linkedin.com/in/sneha-t",
-    email: "social@iedcgecpkd.org",
-    github: "https://github.com/sneha-t"
+    linkedin: "https://www.linkedin.com/in/aswathi-k-r-8959372a2",
+    email: "aswathihq@gmail.com",
+    github: "https://github.com/aswathihq"
   },
   {
     name: "ADITHYAN K",
     role: "CONTENT LEAD",
     image: "/team/CONTENT_LEAD.jpg",
-    linkedin: "https://linkedin.com/in/sneha-t",
-    email: "social@iedcgecpkd.org",
-    github: "https://github.com/sneha-t"
+    linkedin: "https://in.linkedin.com/in/adithyank106",
+    email: "adithyank106@gmail.com",
+    github: "https://github.com/AdithyanK10"
+  },
+  {
+    name: "AYYAPPA DAS K",
+    role: "TECHNOLOGY LEAD",
+    image: "/team/TECHNOLOGY_LEAD.jpg",
+    linkedin: "https://www.linkedin.com/in/ayyappadasvasudevan",
+    email: "ayyappadasvasudev@gmail.com",
+    github: "https://github.com/AYYAPPADAS605"
   }
 ];
 
@@ -154,15 +153,21 @@ const TeamSection = () => {
                   {/* Overlay with social icons */}
                   <div className={`absolute inset-0 bg-gradient-to-t from-blue-900/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end justify-center pb-3`}>
                     <div className="flex space-x-2 transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300">
-                      <a href={member.linkedin} target="_blank" rel="noopener noreferrer" className="w-8 h-8 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center cursor-pointer hover:bg-white/30 transition-colors">
-                        <Linkedin className="w-4 h-4 text-white" />
-                      </a>
-                      <a href={`mailto:${member.email}`} className="w-8 h-8 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center cursor-pointer hover:bg-white/30 transition-colors">
-                        <Mail className="w-4 h-4 text-white" />
-                      </a>
-                      <a href={member.github} target="_blank" rel="noopener noreferrer" className="w-8 h-8 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center cursor-pointer hover:bg-white/30 transition-colors">
-                        <Github className="w-4 h-4 text-white" />
-                      </a>
+                      {member.linkedin && (
+                        <a href={member.linkedin} target="_blank" rel="noopener noreferrer" className="w-8 h-8 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center cursor-pointer hover:bg-white/30 transition-colors">
+                          <Linkedin className="w-4 h-4 text-white" />
+                        </a>
+                      )}
+                      {member.email && (
+                        <a href={`mailto:${member.email}`} className="w-8 h-8 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center cursor-pointer hover:bg-white/30 transition-colors">
+                          <Mail className="w-4 h-4 text-white" />
+                        </a>
+                      )}
+                      {member.github && (
+                        <a href={member.github} target="_blank" rel="noopener noreferrer" className="w-8 h-8 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center cursor-pointer hover:bg-white/30 transition-colors">
+                          <Github className="w-4 h-4 text-white" />
+                        </a>
+                      )}
                     </div>
                   </div>
                 </div>

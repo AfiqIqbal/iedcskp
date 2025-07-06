@@ -1,11 +1,21 @@
 rules_version = '2';
 service cloud.firestore {
   match /databases/{database}/documents {
-    // Allow read access to all users
+    // Allow read access to all users for events
     match /events/{eventId} {
       allow read: if true;
       
       // Only allow admins to create, update, or delete events
+      allow create, update, delete: if request.auth != null && 
+        get(/databases/$(database)/documents/admins/$(request.auth.uid)).data.isAdmin == true;
+    }
+    
+    // Winners collection - public read, admin write
+    match /winners/{winnerId} {
+      // Allow anyone to read winners
+      allow read: if true;
+      
+      // Only allow admins to create, update, or delete winners
       allow create, update, delete: if request.auth != null && 
         get(/databases/$(database)/documents/admins/$(request.auth.uid)).data.isAdmin == true;
     }

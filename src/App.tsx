@@ -11,6 +11,7 @@ import NotFound from "./pages/NotFound";
 import { AdminProvider, useAdmin } from '@/contexts/AdminContext';
 import { EventProvider } from '@/contexts/EventContext';
 import { MessageProvider } from '@/contexts/MessageContext';
+import { WinnerProvider } from '@/contexts/WinnerContext';
 
 const ProtectedRoute = ({ children }: { children: React.ReactNode }) => {
   const { isAdmin } = useAdmin();
@@ -31,21 +32,23 @@ const App = () => (
       <AdminProvider>
         <EventProvider>
           <MessageProvider>
-            <Router>
-              <Routes>
-                <Route path="/" element={<Index />} />
-                <Route path="/admin/login" element={<AdminLogin />} />
-                <Route
-                  path="/admin/dashboard"
-                  element={
-                    <ProtectedRoute>
-                      <AdminDashboard />
-                    </ProtectedRoute>
-                  }
-                />
-                <Route path="*" element={<NotFound />} />
-              </Routes>
-            </Router>
+            <WinnerProvider>
+              <Router>
+                <Routes>
+                  <Route path="/" element={<Index />} />
+                  <Route path="/admin/login" element={<AdminLogin />} />
+                  <Route
+                    path="/admin/dashboard"
+                    element={
+                      <ProtectedRoute>
+                        <AdminDashboard />
+                      </ProtectedRoute>
+                    }
+                  />
+                  <Route path="*" element={<NotFound />} />
+                </Routes>
+              </Router>
+            </WinnerProvider>
           </MessageProvider>
         </EventProvider>
       </AdminProvider>

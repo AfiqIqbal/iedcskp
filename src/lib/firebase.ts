@@ -1,6 +1,7 @@
 import { initializeApp, getApps, getApp } from 'firebase/app';
 import { getFirestore, connectFirestoreEmulator } from 'firebase/firestore';
 import { getAuth, connectAuthEmulator } from 'firebase/auth';
+import { getStorage } from 'firebase/storage';
 
 // Log environment variables for debugging
 console.log('Environment variables:', {
@@ -30,6 +31,7 @@ console.log('Firebase Config:', {
 let firebaseApp;
 let db;
 let auth;
+let storage;
 
 // Only initialize on client-side
 if (typeof window !== 'undefined') {
@@ -43,10 +45,14 @@ if (typeof window !== 'undefined') {
     // Initialize Auth
     auth = getAuth(firebaseApp);
     
+    // Initialize Storage
+    storage = getStorage(firebaseApp);
+    
     // Log successful initialization
     console.log('Firebase initialized successfully');
     console.log('Firebase app:', firebaseApp);
     console.log('Firestore instance:', db);
+    console.log('Storage instance:', storage);
     
     // For local development with emulators
     if (import.meta.env.DEV) {
@@ -62,7 +68,7 @@ if (typeof window !== 'undefined') {
   console.log('Server-side: Firebase not initialized');
 }
 
-export { db, auth };
+export { db, auth, storage };
 // Add at the end of firebase.ts
 console.log('Firebase initialized with config:', {
   projectId: firebaseConfig.projectId,
