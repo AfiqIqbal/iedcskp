@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" fill="none">
+  <rect width="800" height="600" fill="#EEF2FF"/>
+  <path d="M350 200 Q400 150 450 200 Q500 250 450 300 Q400 350 350 300 Q300 250 350 200" fill="#6366F1"/>
+  <circle cx="400" cy="250" r="30" fill="#3B82F6"/>
+  <path d="M300 350 L500 350 L400 450 Z" fill="#4F46E5" opacity="0.6"/>
+  <text x="400" y="500" text-anchor="middle" font-family="Arial" font-size="48" fill="#1F2937">Tech Talk</text>
+  <text x="400" y="550" text-anchor="middle" font-family="Arial" font-size="24" fill="#4B5563">AI Innovation</text>
+</svg>
