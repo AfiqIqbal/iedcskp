@@ -2,7 +2,7 @@
 
 ## 📌 Project Overview
 
-Official website for the Innovation and Entrepreneurship Development Cell (IEDC) at Government Engineering College Palakkad. This platform showcases our events, team, and achievements while providing an admin interface for content management.
+Official website for the Innovation and Entrepreneurship Development Cell (IEDC) at Government Engineering College Sreekrishnapuram. This platform showcases our events, team, and achievements while providing an admin interface for content management.
 
 ## ✨ Key Features
 

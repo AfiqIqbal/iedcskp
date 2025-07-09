@@ -168,7 +168,7 @@ const ContactSection = () => {
                 <div className="flex items-start">
                   <MapPin className="h-5 w-5 mr-3 text-emerald-400 mt-0.5" />
                   <div className="text-gray-700">
-                    Government Engineering College<br />
+                    Government Engineering College Sreekrishnapuram<br />
                     Sreekrishnapuram, Palakkad<br />
                     Kerala, India
                   </div>

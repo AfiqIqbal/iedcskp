@@ -35,7 +35,7 @@ const Footer = () => {
               </div>
             </div>
             <p className="text-gray-300 leading-relaxed mb-6 max-w-md">
-              Innovation and Entrepreneurship Development Cell at Government Engineering College Palakkad, 
+              Innovation and Entrepreneurship Development Cell at Government Engineering College Sreekrishnapuram, 
               fostering the next generation of entrepreneurs and innovators.
             </p>
             <div className="flex space-x-4">
@@ -108,7 +108,7 @@ const Footer = () => {
               <div className="flex items-start">
                 <MapPin className="h-5 w-5 mr-3 text-emerald-400 mt-0.5" />
                 <span className="text-gray-300 text-sm">
-                  Government Engineering College<br />
+Government Engineering College Sreekrishnapuram<br />
                   Sreekrishnapuram, Palakkad<br />
                   Kerala, India
                 </span>
