@@ -152,7 +152,7 @@ This project is built with:
 2. The project is set up for automatic deployment via Vercel
 3. Visit your Vercel dashboard to monitor the deployment status
 
-### Google Drive Integration
+### Google Drive Integration (use https://postimg.cc/ instead)
 To add event images:
 1. Upload your poster to Google Drive
 2. Get a shareable link:
