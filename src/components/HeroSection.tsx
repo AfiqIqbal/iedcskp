@@ -58,7 +58,7 @@ const HeroSection = () => {
           </div>
           
           <h1 className="text-6xl md:text-8xl font-bold text-white mb-6 leading-tight">
-            <span className="block text-gradient-modern bg-clip-text text-transparent">
+            <span className="block text-white">
               IEDC
             </span>
             <span className="block text-4xl md:text-6xl text-white/90 font-light">
