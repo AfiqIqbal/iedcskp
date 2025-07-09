@@ -1,9 +1,9 @@
 import { createContext, useContext, useEffect, useState } from 'react';
-import { collection, query, orderBy, onSnapshot, addDoc, doc, updateDoc, deleteDoc } from 'firebase/firestore';
+import { collection, query, orderBy, onSnapshot, addDoc, doc, updateDoc, deleteDoc, serverTimestamp } from 'firebase/firestore';
 import { db } from '@/lib/firebase';
-import { GalleryItem, GALLERY_CATEGORIES } from '@/types/gallery';
+import { GalleryItem, GALLERY_CATEGORIES, GalleryImage } from '@/types/gallery';
 
-export type { GalleryItem };
+export type { GalleryItem, GalleryImage };
 export { GALLERY_CATEGORIES };
 
 interface GalleryContextType {
@@ -23,11 +23,21 @@ export const GalleryProvider = ({ children }: { children: React.ReactNode }) => 
   useEffect(() => {
     const q = query(collection(db, 'gallery'), orderBy('eventDate', 'desc'));
     const unsubscribe = onSnapshot(q, (snapshot) => {
-      const items = snapshot.docs.map(doc => ({
+      const items = snapshot.docs.map(doc => {
+      const data = doc.data();
+      // Handle both Firestore Timestamp and string dates
+      const eventDate = data.eventDate?.toDate 
+        ? data.eventDate.toDate().toISOString() 
+        : data.eventDate;
+        
+      return {
         id: doc.id,
-        ...doc.data(),
-        eventDate: doc.data().eventDate?.toDate().toISOString()
-      } as GalleryItem));
+        ...data,
+        eventDate: eventDate || new Date().toISOString(), // Fallback to current date if not set
+        createdAt: data.createdAt || Date.now(),
+        updatedAt: data.updatedAt || Date.now()
+      } as GalleryItem;
+    });
       setGalleryItems(items);
       setLoading(false);
     });
@@ -36,18 +46,23 @@ export const GalleryProvider = ({ children }: { children: React.ReactNode }) => 
   }, []);
 
   const addGalleryItem = async (item: Omit<GalleryItem, 'id' | 'createdAt' | 'updatedAt'>) => {
-    const now = Date.now();
-    await addDoc(collection(db, 'gallery'), {
+    const now = new Date().toISOString();
+    const galleryItem = {
       ...item,
+      // Ensure we have at least one image
+      images: item.images?.length ? item.images : [{ url: '', caption: '' }],
+      eventDate: item.eventDate || now,
       createdAt: now,
       updatedAt: now,
-    });
+    };
+    await addDoc(collection(db, 'gallery'), galleryItem);
   };
 
   const updateGalleryItem = async (id: string, updates: Partial<GalleryItem>) => {
+    const now = new Date().toISOString();
     await updateDoc(doc(db, 'gallery', id), {
       ...updates,
-      updatedAt: Date.now(),
+      updatedAt: now,
     });
   };
 

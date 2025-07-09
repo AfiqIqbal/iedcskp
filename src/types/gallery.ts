@@ -1,12 +1,19 @@
+export interface GalleryImage {
+  id: string;
+  url: string;
+  caption?: string;
+  order?: number;
+}
+
 export interface GalleryItem {
   id?: string;
-  imageUrl: string;
   title: string;
   description: string;
+  images: GalleryImage[];
   eventDate: string;
   category: string;
-  createdAt: number;
-  updatedAt: number;
+  createdAt?: string;
+  updatedAt?: string;
 }
 
 export const GALLERY_CATEGORIES = [

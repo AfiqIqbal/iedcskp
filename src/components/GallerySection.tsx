@@ -66,24 +66,42 @@ export default function GallerySection() {
                 className="group relative overflow-hidden rounded-xl shadow-md hover:shadow-lg transition-all duration-300 bg-white"
                 onClick={() => setSelectedImage(item.imageUrl)}
               >
-                <div className="aspect-w-16 aspect-h-9 w-full h-64 overflow-hidden">
-                  <img
-                    src={item.imageUrl}
-                    alt={item.title}
-                    className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
-                    onError={(e) => {
-                      (e.target as HTMLImageElement).style.display = 'none';
-                      const parent = (e.target as HTMLElement).parentElement;
-                      if (parent) {
-                        parent.innerHTML = `
-                          <div class="w-full h-full flex flex-col items-center justify-center bg-gray-50 p-6 text-center">
-                            <ImageIcon class="h-12 w-12 text-gray-400 mb-2" />
-                            <p class="text-sm text-gray-500">Image not available</p>
-                          </div>
-                        `;
-                      }
-                    }}
-                  />
+                <div className="aspect-w-16 aspect-h-9 w-full h-64 overflow-hidden bg-gray-100">
+                  {item.imageUrl ? (
+                    <img
+                      src={item.imageUrl}
+                      alt={item.title}
+                      className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                      onError={(e) => {
+                        const target = e.target as HTMLImageElement;
+                        target.style.display = 'none';
+                        const parent = target.parentElement;
+                        if (parent) {
+                          const fallback = document.createElement('div');
+                          fallback.className = 'w-full h-full flex flex-col items-center justify-center bg-gray-50 p-6 text-center';
+                          const icon = document.createElement('div');
+                          icon.className = 'text-gray-400 mb-2';
+                          icon.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg>';
+                          const text = document.createElement('p');
+                          text.className = 'text-sm text-gray-500';
+                          text.textContent = 'Image not available';
+                          fallback.appendChild(icon);
+                          fallback.appendChild(text);
+                          parent.appendChild(fallback);
+                        }
+                      }}
+                      onLoad={(e) => {
+                        // Image loaded successfully
+                        const target = e.target as HTMLImageElement;
+                        target.style.display = 'block';
+                      }}
+                    />
+                  ) : (
+                    <div className="w-full h-full flex flex-col items-center justify-center bg-gray-50 p-6 text-center">
+                      <ImageIcon className="h-12 w-12 text-gray-400 mb-2" />
+                      <p className="text-sm text-gray-500">No image available</p>
+                    </div>
+                  )}
                 </div>
                 <div className="p-5">
                   <div className="flex justify-between items-start mb-2">
@@ -108,7 +126,7 @@ export default function GallerySection() {
         {selectedImage && (
           <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/80 p-4" onClick={() => setSelectedImage(null)}>
             <button 
-              className="absolute top-4 right-4 text-white hover:text-gray-300 focus:outline-none"
+              className="absolute top-4 right-4 text-white hover:text-gray-300 focus:outline-none z-10"
               onClick={(e) => {
                 e.stopPropagation();
                 setSelectedImage(null);
@@ -117,11 +135,43 @@ export default function GallerySection() {
               <X className="h-8 w-8" />
             </button>
             <div className="relative max-w-4xl w-full max-h-[90vh]" onClick={(e) => e.stopPropagation()}>
-              <img 
-                src={selectedImage} 
-                alt="Enlarged view" 
-                className="max-w-full max-h-[80vh] mx-auto object-contain"
-              />
+              {selectedImage ? (
+                <img 
+                  src={selectedImage} 
+                  alt="Enlarged view" 
+                  className="max-w-full max-h-[80vh] mx-auto object-contain"
+                  onError={(e) => {
+                    const target = e.target as HTMLImageElement;
+                    target.style.display = 'none';
+                    const parent = target.parentElement;
+                    if (parent) {
+                      const fallback = document.createElement('div');
+                      fallback.className = 'w-full h-64 flex flex-col items-center justify-center bg-gray-800 rounded-lg';
+                      const icon = document.createElement('div');
+                      icon.className = 'text-gray-400 mb-2';
+                      icon.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg>';
+                      const text = document.createElement('p');
+                      text.className = 'text-white text-lg';
+                      text.textContent = 'Failed to load image';
+                      fallback.appendChild(icon);
+                      fallback.appendChild(text);
+                      parent.appendChild(fallback);
+                    }
+                  }}
+                  onLoad={(e) => {
+                    // Image loaded successfully
+                    const target = e.target as HTMLImageElement;
+                    target.style.display = 'block';
+                  }}
+                />
+              ) : (
+                <div className="w-full h-64 flex items-center justify-center bg-gray-800 rounded-lg">
+                  <div className="text-center">
+                    <ImageIcon className="h-12 w-12 text-gray-400 mx-auto mb-2" />
+                    <p className="text-gray-300">No image available</p>
+                  </div>
+                </div>
+              )}
             </div>
           </div>
         )}
