@@ -72,23 +72,35 @@ export default function GallerySection() {
           <p className="text-gray-600">Relive the memorable moments from our past events and activities</p>
         </div>
 
-        <div className="flex justify-center mb-6">
-          <div className="inline-flex space-x-2 p-1 bg-gray-100 rounded-full">
-            {categories.map((category) => (
-              <Button
-                key={category}
-                variant="ghost"
-                className={cn(
-                  'rounded-full px-4 py-1.5 text-sm font-medium transition-all',
-                  selectedCategory === category 
-                    ? 'bg-white shadow-sm text-blue-600' 
-                    : 'text-gray-600 hover:bg-gray-200'
-                )}
-                onClick={() => setSelectedCategory(category)}
-              >
-                {category}
-              </Button>
-            ))}
+        <div className="relative mb-6">
+          <div className="relative">
+            <div 
+              className="flex space-x-2 overflow-x-auto pb-3 px-1 -mx-1 scrollbar-hide"
+              style={{
+                scrollbarWidth: 'none',
+                msOverflowStyle: 'none',
+                WebkitOverflowScrolling: 'touch',
+              }}
+            >
+              {categories.map((category) => (
+                <div key={category} className="flex-shrink-0">
+                  <Button
+                    variant="ghost"
+                    className={cn(
+                      'whitespace-nowrap rounded-full px-4 py-1.5 text-sm font-medium transition-all',
+                      'focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2',
+                      selectedCategory === category 
+                        ? 'bg-white shadow-sm text-blue-600' 
+                        : 'text-gray-600 hover:bg-gray-200'
+                    )}
+                    onClick={() => setSelectedCategory(category)}
+                  >
+                    {category}
+                  </Button>
+                </div>
+              ))}
+            </div>
+            <div className="absolute right-0 top-0 bottom-0 w-8 bg-gradient-to-l from-white to-transparent pointer-events-none"></div>
           </div>
         </div>
 
@@ -123,10 +135,17 @@ export default function GallerySection() {
                 __html: `
                   .scrollbar-hide::-webkit-scrollbar {
                     display: none;
+                    height: 0;
+                    width: 0;
                   }
                   .scrollbar-hide {
                     -ms-overflow-style: none;
                     scrollbar-width: none;
+                  }
+                  @media (hover: none) {
+                    .scrollbar-hide {
+                      -webkit-overflow-scrolling: touch;
+                    }
                   }
                 `
               }} />

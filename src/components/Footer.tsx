@@ -20,7 +20,7 @@ const Footer = () => {
   ];
 
   return (
-    <footer className="bg-gradient-to-r from-slate-900 via-blue-900 to-indigo-900 text-white py-16">
+    <footer className="relative w-full bg-blue-900 text-white py-16">
       <div className="max-w-7xl mx-auto px-4">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-12">
           {/* Club Info */}
@@ -137,6 +137,7 @@ const Footer = () => {
           </div>
         </div>
       </div>
+      
     </footer>
   );
 };
