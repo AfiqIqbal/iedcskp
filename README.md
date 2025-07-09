@@ -1,95 +1,85 @@
-# IEDC Website
+# IEDC GEC PKD - Official Website
 
-## Project Overview
+## 📌 Project Overview
 
-This is the official website for IEDC (Institution's Innovation Council). The website showcases events, team members, and winners of various competitions organized by IEDC.
+Official website for the Innovation and Entrepreneurship Development Cell (IEDC) at Government Engineering College Palakkad. This platform showcases our events, team, and achievements while providing an admin interface for content management.
 
-## Features
+## ✨ Key Features
 
-- **Events Section**: Display upcoming and past events
-- **Team Section**: Showcase the IEDC team members
-- **Winners Section**: Highlight winners of various competitions
-- **Admin Dashboard**: Manage events, winners, and messages
+- **Responsive Gallery**: Interactive event gallery with category filters
+- **Team Showcase**: Display of current IEDC team members
+- **Event Management**: Admin panel for managing events and gallery
+- **Modern UI**: Clean, accessible interface built with modern web technologies
 
-## Tech Stack
+## 🛠️ Tech Stack
 
-- **Frontend**: React + TypeScript + Vite
-- **UI Components**: Shadcn UI
-- **Backend**: Firebase Firestore
-- **Hosting**: Vercel
+- **Frontend**: React 18 + TypeScript + Vite
+- **Styling**: Tailwind CSS with Shadcn UI components
+- **State Management**: React Context API
+- **Backend**: Firebase (Authentication, Firestore, Storage)
+- **Deployment**: Vercel
+- **Icons**: Lucide React
 
-## Getting Started
+## 🚀 Getting Started
 
 ### Prerequisites
 
-- Node.js (v16 or later)
-- npm or yarn
+- Node.js (v18 or later)
+- npm (v9 or later) or yarn
 - Firebase project with Firestore database
 
-### Installation
+### Local Development
 
-1. Clone the repository:
+1. **Clone the repository**
    ```bash
-   git clone <repository-url>
-   cd animated-unnamed-arrival-main
+   git clone https://github.com/AfiqIqbal/iedcskp.git
+   cd iedcskp
    ```
 
-2. Install dependencies:
+2. **Install dependencies**
    ```bash
    npm install
    # or
-   yarn install
+   yarn
    ```
 
-3. Create a `.env.local` file in the root directory with your Firebase configuration:
-   ```
-   VITE_FIREBASE_API_KEY=your-api-key
-   VITE_FIREBASE_AUTH_DOMAIN=your-project.firebaseapp.com
-   VITE_FIREBASE_PROJECT_ID=your-project-id
-   VITE_FIREBASE_STORAGE_BUCKET=your-bucket.appspot.com
-   VITE_FIREBASE_MESSAGING_SENDER_ID=your-sender-id
-   VITE_FIREBASE_APP_ID=your-app-id
-   VITE_FIREBASE_MEASUREMENT_ID=your-measurement-id
-   ```
+3. **Environment Setup**
+   - Create a `.env.local` file in the root directory
+   - Add your Firebase configuration:
+     ```
+     VITE_FIREBASE_API_KEY=your-api-key
+     VITE_FIREBASE_AUTH_DOMAIN=your-project.firebaseapp.com
+     VITE_FIREBASE_PROJECT_ID=your-project-id
+     VITE_FIREBASE_STORAGE_BUCKET=your-bucket.appspot.com
+     VITE_FIREBASE_MESSAGING_SENDER_ID=your-sender-id
+     VITE_FIREBASE_APP_ID=your-app-id
+     VITE_FIREBASE_MEASUREMENT_ID=your-measurement-id
+     ```
 
-4. Start the development server:
+4. **Start the development server**
    ```bash
    npm run dev
    # or
    yarn dev
    ```
 
-## Managing Winners
+## 📝 Admin Features
 
-The website includes a feature to showcase competition winners. Here's how to manage winners:
+### Managing Events
+- Add, edit, or remove events
+- Upload multiple images per event
+- Categorize events (Workshop, Hackathon, Seminar, etc.)
 
-### Adding Winners
+### Team Management
+- Update team member information
+- Add/remove team members
+- Set team member roles and positions
 
-1. Log in to the admin dashboard
-2. Navigate to the "Winners" tab
-3. Click "Add Winners"
-4. Select the event from the dropdown
-5. Add winner details (position, name, team, prize)
-6. Click "Save"
+## 🚀 Deployment
 
-### Editing Winners
+The website is configured for automatic deployment to Vercel on push to the `master` branch.
 
-1. Find the winner entry in the Winners list
-2. Click the edit (pencil) icon
-3. Make your changes
-4. Click "Update"
-
-### Deleting Winners
-
-1. Find the winner entry in the Winners list
-2. Click the delete (trash) icon
-3. Confirm the deletion
-
-## Deployment
-
-The website is configured to deploy to Vercel automatically on push to the main branch.
-
-To deploy manually:
+### Manual Deployment
 
 1. Install Vercel CLI:
    ```bash
@@ -98,7 +88,7 @@ To deploy manually:
 
 2. Deploy:
    ```bash
-   vercel
+   vercel --prod
    ```
 
 ## Firestore Rules
