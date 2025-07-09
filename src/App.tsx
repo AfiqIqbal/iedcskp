@@ -12,6 +12,7 @@ import { AdminProvider, useAdmin } from '@/contexts/AdminContext';
 import { EventProvider } from '@/contexts/EventContext';
 import { MessageProvider } from '@/contexts/MessageContext';
 import { WinnerProvider } from '@/contexts/WinnerContext';
+import { GalleryProvider } from '@/contexts/GalleryContext';
 
 const ProtectedRoute = ({ children }: { children: React.ReactNode }) => {
   const { isAdmin } = useAdmin();
@@ -33,7 +34,8 @@ const App = () => (
         <EventProvider>
           <MessageProvider>
             <WinnerProvider>
-              <Router>
+              <GalleryProvider>
+                <Router>
                 <Routes>
                   <Route path="/" element={<Index />} />
                   <Route path="/admin/login" element={<AdminLogin />} />
@@ -52,6 +54,7 @@ const App = () => (
                   <Route path="*" element={<NotFound />} />
                 </Routes>
               </Router>
+              </GalleryProvider>
             </WinnerProvider>
           </MessageProvider>
         </EventProvider>

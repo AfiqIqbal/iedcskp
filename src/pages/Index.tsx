@@ -6,6 +6,7 @@ import AboutSection from '@/components/AboutSection';
 import TeamSection from '@/components/TeamSection';
 import EventsSection from '@/components/EventsSection';
 import WinnersSection from '@/components/WinnersSection';
+import GallerySection from '@/components/GallerySection';
 import ContactSection from '@/components/ContactSection';
 import Footer from '@/components/Footer';
 
@@ -51,6 +52,7 @@ const Index = () => {
       <TeamSection />
       <EventsSection />
       <WinnersSection />
+      <GallerySection />
       <ContactSection />
       <Footer />
     </div>

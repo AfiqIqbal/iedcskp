@@ -130,19 +130,19 @@ const TeamSection = () => {
           </p>
         </div>
 
-        {/* Team Grid - Responsive layout */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 px-4 animate-on-scroll">
+        {/* Team Grid - Center-focused symmetric layout */}
+        <div className="flex flex-wrap justify-center gap-8 animate-on-scroll">
           {teamMembers.map((member, index) => (
             <div
               key={index}
-              className="group relative w-full"
+              className="group relative w-full max-w-xs sm:w-80 md:w-72 lg:w-64"
               onMouseEnter={() => setHoveredMember(index)}
               onMouseLeave={() => setHoveredMember(null)}
               style={{
                 animationDelay: `${index * 0.1}s`
               }}
             >
-              <div className="bg-white rounded-2xl p-4 shadow-md hover:shadow-lg transition-all duration-300 transform hover:-translate-y-1 hover:scale-[1.02] h-full">
+              <div className="bg-white rounded-2xl p-6 shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-3 hover:scale-105 h-full">
                 {/* Profile Image */}
                 <div className="relative mb-4 overflow-hidden rounded-xl">
                   <img
