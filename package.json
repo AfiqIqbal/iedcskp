@@ -1,8 +1,8 @@
 {
-  "name": "iedcskp",
+  "name": "iedcwebsite",
   "private": true,
   "version": "1.0.0",
-  "homepage": "https://iedcskp.vercel.app",
+  "homepage": "https://iedcwebsite.vercel.app",
   "type": "module",
   "scripts": {
     "dev": "vite",
