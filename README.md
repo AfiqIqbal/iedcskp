@@ -145,25 +145,22 @@ This project is built with:
 - shadcn-ui
 - Tailwind CSS
 
-## How can I deploy this project?
+## Deploying to Production
 
-Simply open [Lovable](https://lovable.dev/projects/dbd34f2e-31c7-4b23-9534-a79750a0cddf) and click on Share -> Publish.
+### Vercel Deployment
+1. Push your changes to the `master` branch
+2. The project is set up for automatic deployment via Vercel
+3. Visit your Vercel dashboard to monitor the deployment status
 
-## Can I connect a custom domain to my Lovable project?
-
-Yes, you can!
-
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
-
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/tips-tricks/custom-domain#step-by-step-guide)
-
-Upload your poster to Google Drive
-Get a shareable link:
-Right-click the file → Share → Anyone with the link
-Copy the sharing link
-Convert the sharing link to a direct image URL:
-For files in "My Drive":
-CopyInsert
-https://drive.google.com/uc?export=view&id=YOUR_FILE_ID
-Replace YOUR_FILE_ID with the ID from your sharing link (the long string of characters between /d/ and /view)
-Use the converted link in your event form
+### Google Drive Integration
+To add event images:
+1. Upload your poster to Google Drive
+2. Get a shareable link:
+   - Right-click the file → Share → Anyone with the link
+   - Copy the sharing link
+3. Convert the sharing link to a direct image URL:
+   ```
+   https://drive.google.com/uc?export=view&id=YOUR_FILE_ID
+   ```
+   Replace `YOUR_FILE_ID` with the ID from your sharing link (the long string of characters between /d/ and /view)
+4. Use the converted link in your event form
